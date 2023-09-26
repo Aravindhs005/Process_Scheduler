@@ -1,0 +1,242 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Global styles */
+body {
+  background-color: black !important; /* Change background color to black */
+  color: rgb(32, 214, 202);
+}
+
+
+#time_quanta {
+	width: 50%;
+	padding: 5px;
+	font-size: 16px;
+	border: 2px solid rgb(0, 0, 0);
+	border-radius: 5px;
+	outline: none;
+	transition: border-color 0.3s ease-in-out;
+  }
+  
+  #time_quanta::placeholder {
+	color: rgb(0, 0, 0);
+	opacity: 0.7;
+  }
+  
+  #time_quanta:focus {
+	border-color: #000000; /* Change the border color on focus */
+  }
+  
+
+.gantt-box {
+	position: relative;
+		border: 2px solid rgb(0, 0, 0);
+		height: 50px;
+		padding-bottom: 30px;
+		text-align: center;
+		background-color: rgb(32, 214, 202); /* Set the background color to sky blue */
+	  
+}
+
+.gantt-box-left {
+	position: absolute;
+	left: 0;
+	margin-left: 3px;
+	bottom: 0;
+}
+
+.gantt-box-right {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	margin-right: 3px;
+}
+
+#time_quanta {
+	width: auto;
+}
+
+#start_btn {
+	background-color: hsl(0, 0%, 0%);
+	transition: opacity 0.15s ease-in-out, color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+	color: rgb(32, 214, 202);
+}
+
+#start_btn:hover {
+	opacity: 0.8;
+}
+
+#drop_btn {
+	background-color: hsl(0, 0%, 0%);
+	transition: opacity 0.15s ease-in-out, color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+	color: rgb(32, 214, 202);
+}
+
+#drop_btn:hover {
+	opacity: 0.8;
+}
+
+#vis_btn {
+	background-color: hsl(273, 100%, 66%);
+	transition: opacity 0.15s ease-in-out, color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+	color: aliceblue;
+}
+
+#vis_btn:hover {
+	opacity: 0.8;
+}
+
+.cpu {
+	background: url('../images/cpu.png') no-repeat;
+	background-size: cover;
+	width: 120px;
+	height: 120px;
+	margin: 20px;
+}
+
+.readyqueue {
+	background: url('../images/fast-time.png') no-repeat;
+	background-size: contain;
+	height: 120px;
+	width: 120px;
+}
+
+.fitem {
+	display: flex;
+	/* border: 2px solid #73AD21; */
+	width: 120px;
+	height: 120px;
+	/* margin: 20px; */
+	justify-content: center;
+	align-items: center;
+}
+
+.flexible {
+	display: flex;
+	height: 100%;
+	width: 100%;
+}
+
+.triangle {
+	width: 0px;
+	height: 0px;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	z-index: 4;
+	border-width: 0 80px 80px 0;
+	border-style: solid;
+	background-color: #e6e7e8;
+	display: block;
+	/*border-radius:3px 0 0 0;*/
+	border-color: transparent #fff transparent #fff;
+}
+
+@media only screen and (max-width: 600px) {
+	.triangle {
+		border-width: 0 65px 50px 0;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.triangle {
+		border-width: 0 80px 80px 0;
+	}
+}
+
+h4{
+	color:rgb(32, 214, 202);
+	padding: 15px;
+}
+/* Add these CSS styles to reduce the table size */
+/* Add this CSS to center the table and its contents */
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+  }
+  
+  table {
+	width: 100%;
+	max-width: 600px; /* Adjust the max-width as needed */
+	font-size: 14px; /* Adjust the font size as needed */
+	border-collapse: collapse;
+	border-spacing: 0;
+	border-radius: 2px;
+	color: #000;
+	text-align: center;
+  }
+  
+  table,
+  th,
+  td {
+	border: 1px solid #000000;
+	justify-content: center;
+	text-align: center;
+
+  }
+  
+  th,
+  td {
+	padding: 8px;
+	text-align: left;
+  }
+  
+  /* Style table headers */
+  /* Make table headings bold and set table contents color to black */
+  th {
+	background-color: #007bff;
+	color: #000000;
+	font-weight: bold;
+  }
+  
+  td {
+	color: #000;
+  }
+  
+  tr:nth-child(even) {
+	background-color: #f2f2f2;
+  }
+  td {
+	border: 1px solid #ddd;
+  }
+  
+  /* Style table hover effect */
+  table:hover tr {
+	background-color: #e0e0e0;
+  }
+  
+  th {
+	background-color: #007bff;
+	color: #000000;
+	font-weight: bold; /* Add this line to make the text bold */
+  }
+  
+
+  #final_result {
+    list-style-type: none;
+    padding: 0;
+    max-height: 300px; /* Adjust the max height as needed to enable scrolling */
+    overflow-y: scroll;
+	text-align: center;
+}
+
+#final_result li {
+    border: 1px solid #000000; /* Border style for the card */
+    background-color: rgba(0, 0, 0, 0.8); /* Background color for the card */
+    color: rgb(32, 214, 202); /* Text color for the card */
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a box shadow for depth */
+    transition: transform 0.2s ease-in-out; /* Add a smooth transition effect for hover */
+}
+
+#final_result li:hover {
+    transform: scale(1.02); /* Add a slight zoom effect on hover */
+}
